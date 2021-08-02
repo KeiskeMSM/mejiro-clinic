@@ -1,0 +1,54 @@
+.contact {
+  margin-bottom: 30px;
+  padding: 26px 20px 27px;
+  font-weight: 100;
+  letter-spacing: -0.1px;
+  background-color: #023432;
+  @include mediaPC {
+    margin-bottom: 40px;
+    padding: 80px 20px 80px;
+  }
+  .inner {
+    margin: 0 auto;
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+  }
+  .tel-cnt {
+    text-align: center;
+    color: cl(white);
+    h3 {
+      margin-bottom: 9px;
+      font-size: 1.6rem;
+      font-weight: 100;
+      letter-spacing: 0.5px;
+      @include mediaPC {
+        margin-bottom: 16px;
+        font-size: 2.5rem;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+      }
+    }
+    a {
+      color: cl(white);
+      font-size: 3rem;
+      line-height: 1;
+      letter-spacing: 6.3px;
+      @include mediaPC {
+        font-size: 6rem;
+        letter-spacing: 9.5px;
+      }
+    }
+    .text {
+      margin-top: 5px;
+      font-size: 1.4rem;
+      letter-spacing: 1.5px;
+      display: block;
+      @include mediaPC {
+        margin: 12px 0 0;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

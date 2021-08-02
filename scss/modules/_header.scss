@@ -1,0 +1,144 @@
+.header {
+  position: relative;
+  width: 100%;
+  .inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+    padding: 10px 10px;
+    transition: 0.3s ease;
+    @include mediaPC {
+      width: calc(100% - 80px);
+      top: 40px;
+      left: 40px;
+    }
+    &.active {
+      background-color: cl(green);
+      transition: 0.3s ease;
+      @include mediaPC {
+        background-color: transparent;
+      }
+    }
+  }
+  // ハンバーガーメニュー
+  .menu {
+    margin: 0px 10px 0 10px;
+    height: 27px;
+    width: 35px;
+    top: 7px;
+    left: 20px;
+    z-index: 10;
+    .nav-btn {
+      width: 100%;
+      height: 100%;
+      appearance: none;
+      background: transparent;
+      border: none;
+      font: inherit;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      span {
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        top: 0;
+        left: 0;
+        background-color: cl(white);
+        transition: 0.3s ease;
+        &.middle {
+          top: 13px;
+          width: 25px;
+        }
+        &.bottom {
+          top: 25px;
+          width: 15px;
+        }
+      }
+      // バツ印をつける
+      &.active {
+        span {
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          transition: 0.3s ease;
+          &.top {
+            transform: rotate(45deg);
+            width: 30px;
+          }
+          &.middle {
+            opacity: 0;
+          }
+          &.bottom {
+            transform: rotate(-45deg);
+            width: 30px;
+          }
+        }
+      }
+    }
+  }
+  .header-logo {
+    width: 200px;
+    max-width: 100%;
+    padding: 0 10px 0 30px;
+    justify-content: end;
+    @include mediaPC {
+      margin-left: 30px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  #nav {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: 0.6s ease;
+    &.active {
+      left: 0;
+    }
+    @include mediaPC {
+      position: static;
+    }
+  }
+  .nav-list {
+    margin-top: 0;
+    padding: 40px 30px 33px;
+    width: auto;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    background-color: cl(primary);
+    @include mediaPC {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 0;
+      background-color: transparent;
+      .item {
+        + .item {
+          margin-top: 0;
+          margin-left: 30px;
+        }
+      }
+    }
+    a {
+      color: cl(gold);
+      display: block;
+      width: 100%;
+      margin: 0 0 25px;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      background: url(../../img/right_arrow.png) no-repeat right center / 18px;
+      @include mediaPC {
+        color: cl(white);
+        background: transparent;
+      }
+    }
+  }
+}

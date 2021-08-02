@@ -1,0 +1,64 @@
+.summary {
+  margin: 0 auto 80px;
+  max-width: 1540px;
+  width: calc(100% - 60px);
+  position: relative;
+  .title-box {
+    margin-bottom: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    @include mediaPC {
+      margin: 0 auto 54px;
+      max-width: 1142px;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+    p {
+      font-size: 1.4rem;
+      text-align: left;
+      margin-top: 11px;
+      @include mediaPC {
+        margin-top: 21px;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.86;
+        letter-spacing: 0.9px;
+        text-align: right;
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+  ul {
+    width: auto;
+    padding: 4px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: cl(primary);
+    box-sizing: border-box;
+    position: relative;
+    @include mediaPC {
+      margin: -208px auto 0 auto;
+      padding: 3px 59px;
+      max-width: 859px;
+      width: 100%;
+    }
+    li {
+      margin-top: 3px;
+      width: calc(100% / 2 - 8px);
+      @include mediaPC {
+        margin-top: 54px;
+        width: calc(100% / 2 - 29px);
+      }
+      a {
+        padding: 0 6px 4px 8px;
+        font-weight: 100;
+        letter-spacing: -0.1px;
+        width: 100%;
+      }
+    }
+  }
+}

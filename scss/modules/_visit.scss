@@ -1,0 +1,105 @@
+.visit-cnt {
+  margin: 0 30px;
+  padding: 0 0 45px 0;
+  width: calc(100% - 60px);
+  @include mediaPC {
+    display: flex;
+    margin: 0 auto 80px;
+    width: calc(100% - 100px);
+    max-width: 1145px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .visit-box {
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 15px 20px 8px 19px;
+    @include mediaPC {
+      width: 48%;
+      padding: 50px 49px 50px 60px;
+    }
+    &:nth-child(2) {
+      margin-top: 50px;
+			@include mediaPC {
+				margin-top: 0;
+			}
+      p {
+        margin-bottom: 50px;
+      }
+    }
+    .title {
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @include mediaPC {
+        margin-bottom: 3px;
+      }
+      .caution {
+        margin-top: 3px;
+        font-weight: 100;
+        letter-spacing: 1.2px;
+        font-size: 1.4rem;
+        @include mediaPC {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    table {
+      width: 80%;
+      border-spacing: 0;
+      border-collapse: collapse;
+      margin: 0 auto;
+      @include mediaPC {
+        width: 100%;
+      }
+      thead {
+        border-bottom: 1px solid cl(border);
+        th {
+          margin-bottom: 18px;
+          font-size: 1.4rem;
+          text-align: center;
+          line-height: 1.4;
+          padding: 7px 2px;
+          @include mediaPC {
+            font-size: 1.5rem;
+            padding: 15px 0;
+          }
+        }
+      }
+      tbody {
+        .time {
+          padding: 0 14px 0 3px;
+          width: auto;
+          letter-spacing: 2.6px;
+          text-align: right;
+          font-size: 1.4rem;
+          text-align: right;
+          line-height: 1.4;
+          vertical-align: middle;
+          border-bottom: 1px solid cl(border);
+          @include mediaPC {
+            font-size: 1.5rem;
+          }
+        }
+        td {
+          padding: 15px 0;
+          font-size: 1.3rem;
+          font-weight: 400;
+          vertical-align: middle;
+          border-bottom: 1px solid cl(border);
+          width: 9.3%;
+          text-align: center;
+          box-sizing: border-box;
+        }
+      }
+    }
+    p {
+      font-size: 1.4rem;
+      padding-top: 14px;
+      @include mediaPC {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

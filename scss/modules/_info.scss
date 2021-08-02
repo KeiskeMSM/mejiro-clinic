@@ -1,0 +1,49 @@
+.info {
+  margin-top: 70px;
+  .inner {
+    display: block;
+    margin: 0 30px;
+    padding: 0 0 45px 0;
+    @include mediaPC {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      max-width: 1140px;
+      padding: 0 0 120px 0;
+    }
+    .sns-box {
+      width: 100%;
+      padding: 0 0 45px 0;
+      @include mediaPC {
+        width: 48.5%;
+      }
+    }
+    .info-box {
+      width: 100%;
+      padding: 0 0 45px 0;
+      @include mediaPC {
+        width: 48.5%;
+        font-size: 1.5rem;
+      }
+    }
+    dl {
+      font-size: 1.2rem;
+      padding: 15px 0;
+      border-bottom: 1px solid cl(border);
+      @include mediaPC {
+        font-size: 1.5rem;
+      }
+      dt {
+        float: left;
+        clear: left;
+        width: 40%;
+      }
+      dd {
+        margin-left: 31%;
+        a {
+          color: cl(black);
+        }
+      }
+    }
+  }
+}

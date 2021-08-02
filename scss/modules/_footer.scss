@@ -1,0 +1,51 @@
+.footer {
+  padding: 50px;
+  .page-top {
+    text-align: center;
+    margin-bottom: 38px;
+    font-size: 1.5rem;
+    .page-top-button {
+      color: cl(gold);
+      cursor: pointer;
+      display: inline-block;
+    }
+  }
+  .footer-nav {
+    margin: 0 auto 35px auto;
+    padding-top: 65px;
+    border-top: 1px solid cl(border);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .footer-logo {
+      text-align: center;
+    }
+    .footer-list {
+      margin-top: -7px;
+      display: flex;
+      justify-content: space-between;
+      width: calc(100% - 80px);
+      li {
+        margin-bottom: 20px;
+        a {
+          font-size: 1.5rem;
+          font-weight: 500;
+          letter-spacing: 1.2px;
+          color: cl(black);
+        }
+      }
+    }
+    .list {
+      margin-top: 4px;
+      opacity: 0.7;
+      li {
+        margin-bottom: 0;
+      }
+    }
+  }
+  p {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}

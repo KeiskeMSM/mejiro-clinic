@@ -1,0 +1,110 @@
+.about {
+  .about-cnt {
+    margin: 0 30px;
+    padding: 0 0 45px 0;
+    @include mediaPC {
+      display: flex;
+      margin: 0 auto 80px;
+      width: calc(100% - 100px);
+      max-width: 1145px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .text-cnt {
+      margin-bottom: 40px;
+      @include mediaPC {
+        width: 50%;
+      }
+      p {
+        color: cl(p);
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        @include mediaPC {
+          margin-bottom: 30px;
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 1.86;
+          letter-spacing: 0.8px;
+          text-align: justify;
+        }
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .feature-cnt {
+      width: 100%;
+      font-size: 1.4rem;
+      position: relative;
+      text-align: right;
+      @include mediaPC {
+        width: 50%;
+        font-size: 1.5rem;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        padding-top: 7px;
+        @include mediaPC {
+          justify-content: flex-end;
+        }
+        li {
+          margin: 0 0 0 10px;
+          &:first-of-type {
+            margin-left: 0;
+          }
+          padding: 5px 0;
+          width: 105px;
+          height: 95px;
+          line-height: 1.6;
+          color: cl(gold);
+          font-size: 1.4rem;
+          letter-spacing: -0.6px;
+          background-color: cl(feature);
+          border-radius: 100%;
+          box-sizing: border-box;
+          text-align: center;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          @include mediaPC {
+            margin: -7px 0 0 20px;
+            padding: 10px;
+            width: 140px;
+            height: 140px;
+            font-size: 1.6rem;
+            line-height: 2;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+      .cmn-btn {
+        position: absolute;
+        right: 2px;
+        margin-top: 20px;
+        @include mediaPC {
+          bottom: 10px;
+          right: 2px;
+        }
+      }
+    }
+  }
+  .slider-box {
+    margin: 50px auto;
+    width: auto;
+    @include mediaPC {
+      max-width: 1145px;
+      margin: 30px auto;
+      width: calc(100% - 100px);
+    }
+    .image-list {
+      position: relative;
+      padding-right: 30px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

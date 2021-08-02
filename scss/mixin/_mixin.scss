@@ -1,0 +1,24 @@
+// スマホ用
+@mixin mediaPC {
+  @media print, screen and (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin mediaSP {
+  @media print, screen and (max-width: 900px) {
+    @content;
+  }
+}
+
+.sp {
+  @include mediaPC {
+    display: none !important;
+  }
+}
+
+.pc {
+  @include mediaSP {
+    display: none !important;
+  }
+}

@@ -1,0 +1,82 @@
+// COLORS
+// @include cl(black);
+//--------------------------------------------------
+
+$colors: (
+  primary: #f9f8f4,
+  white: #ffffff,
+  gold: #9f874e,
+  feature: #f5f2ed,
+  background: #e5ddd0,
+  green: #023432,
+  p: #24130d,
+  black: #000000,
+  border: rgba(245, 242, 237, 0.9),
+);
+
+@function cl($key) {
+  @return map-get($colors, $key);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Hiragino Mincho Pro", serif;
+  color: cl(p);
+  background-color: cl(primary);
+}
+
+a {
+  text-decoration: none;
+}
+
+.cmn-title {
+  color: cl(gold);
+  .main {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    display: block;
+    @include mediaPC {
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      margin-bottom: 16px;
+    }
+  }
+  .sub {
+    font-size: 1.4rem;
+    letter-spacing: 1.1px;
+    margin-bottom: 13px;
+    display: block;
+    @include mediaPC {
+      font-size: 1.5rem;
+      letter-spacing: 1.7px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.cmn-btn a {
+  color: cl(black);
+  width: 200px;
+  padding: 0 20px 25px 26px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 2px;
+  text-align: left;
+  background: url(../img/right_arrow.png) no-repeat right top 7px;
+  background-size: 10px 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.4rem;
+  @include mediaPC {
+    width: 100%;
+    font-size: 1.5rem;
+  }
+}
